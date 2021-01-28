@@ -22,7 +22,7 @@ async def main():
 
     try:
         for channel in CHANNELS:
-            async for user_message in user_bot.iter_history(-1001477606018):
+            async for user_message in user_bot.iter_history(channel):
                 message = await bot.get_messages(
                     channel,
                     user_message.message_id,
